@@ -1,0 +1,67 @@
+// .mainarea {
+//     display: flex;
+
+
+//     .logo {
+//         // margin-top:40px ;
+//         background-color: orangered;
+//         height: 100vh;
+//     }
+
+//     h6 {
+//         margin-left: 50px;
+//     }
+
+//     button {
+//         margin-left: 50px;
+//         margin-top: 20px;
+//     }
+
+//     .account {
+//         margin-top: 10px;
+//     }
+// }
+
+
+
+
+.mainarea {
+    display: flex;
+    .logo {
+        display: flex;
+        height: 100vh;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: #EB5757;
+        }
+    .signup{
+        
+        // .headers{
+            
+        //         h3{
+        //             position: absolute;
+        //             width: 194px;
+        //             height: 29px;
+        //             left: 881px;
+        //             top: 102px;
+                    
+        //             font-family: 'Montserrat';
+        //             font-style: normal;
+        //             font-weight: 600;
+        //             font-size: 24px;
+        //             line-height: 29px;
+                    
+        //             /* Centum/Drakblue */
+                    
+        //             color: #021F55;  
+                  
+        
+        //         }
+        //     }
+        }
+
+        .signInform{
+            
+        }
+}
+       
