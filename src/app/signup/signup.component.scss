@@ -27,41 +27,63 @@
 
 .mainarea {
     display: flex;
+
     .logo {
         display: flex;
         height: 100vh;
         align-items: flex-end;
         justify-content: center;
         background-color: #EB5757;
-        }
-    .signup{
-        
-        // .headers{
-            
-        //         h3{
-        //             position: absolute;
-        //             width: 194px;
-        //             height: 29px;
-        //             left: 881px;
-        //             top: 102px;
-                    
-        //             font-family: 'Montserrat';
-        //             font-style: normal;
-        //             font-weight: 600;
-        //             font-size: 24px;
-        //             line-height: 29px;
-                    
-        //             /* Centum/Drakblue */
-                    
-        //             color: #021F55;  
-                  
-        
-        //         }
-        //     }
-        }
+    }
 
-        .signInform{
-            
+    .signup {
+
+        .signInform {
+
+            .headers {
+                h2 {
+                    // position: absolute;
+                    margin-left: 205px;
+                    margin-top: 102px;
+
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+
+                p {
+                    // position: absolute;
+                    margin-left: 230px;
+                    margin-top: 14px;
+
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+
+                }
+
+
+            }
+
+            .form {
+
+                h6 {}
+
+                input {}
+
+                .btn {}
+
+                p {}
+
+            }
+
+
+
+
         }
+    }
 }
-       
