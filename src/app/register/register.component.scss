@@ -1,0 +1,66 @@
+.mainarea{
+    display: flex;
+    
+    .color{
+            display: flex;
+            height: 100vh;
+            left: 0px;
+            top: 0px;
+            background: #EB5757;
+        }
+    .textfield{
+
+        h6{
+    display: flex;
+width: 208px;
+height: 29px;
+margin-left: 97px;
+margin-top: 230px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+
+/* Green 1 */
+
+color: #219653;
+
+        }
+        
+        h5{
+            // position: absolute;
+width: 278px;
+height: 34px;
+margin-left: 97px;
+margin-top: 31px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+
+color: #000000;
+
+        }
+        button{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            // padding: 0px 140px;
+            
+            position: absolute;
+            width: 320px;
+            height: 32px;
+           margin-left: 97px;
+            margin-top: 31px;
+            
+            background: #2D81F7;
+            
+        }
+    }
+}
+        

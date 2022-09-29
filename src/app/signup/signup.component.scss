@@ -34,6 +34,8 @@
         align-items: flex-end;
         justify-content: center;
         background-color: #EB5757;
+
+ 
     }
 
     .signup {
@@ -54,7 +56,7 @@
                 }
 
                 p {
-                    // position: absolute;
+                    position: absolute;
                     margin-left: 230px;
                     margin-top: 14px;
 
@@ -71,13 +73,70 @@
 
             .form {
 
-                h6 {}
+                h6 {
+                    // width: 62px;
+                    // height: 15px;
+                    margin-top: 27px;
+                    margin-left: 142px;
 
-                input {}
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
 
-                .btn {}
+                }
 
-                p {}
+                input {
+
+                        box-sizing: border;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 9px 12px;
+                        gap: 10px;
+                        width: 320px;
+                        height: 38px;
+                        background: #FFFFFF;
+                        border: 1px solid #E1E7EA;
+                        border-radius: 3px;
+                        margin-left: 142px;
+                        margin-top: 6px;
+
+                }
+
+                button {
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    // padding: 0px 140px;
+                    // position: absolute;
+                    width: 320px;
+                    height: 32px;
+                    margin-left: 142px;
+                    margin-top: 38px;
+                    background-color: #2D81F7;
+                    color: #FFFFFF;
+                    }
+                }
+
+                p {
+                    // position: absolute;
+                    width: 198px;
+                    height: 24px;
+                    margin-left: 203px;
+                    margin-top: 26px;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 24px;
+                    text-align: center;
+                    // color: #000000;
+
+                }
 
             }
 
@@ -86,4 +145,3 @@
 
         }
     }
-}
