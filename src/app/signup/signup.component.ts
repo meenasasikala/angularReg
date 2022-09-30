@@ -13,7 +13,8 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
   createAccount(){
-    this.router.navigate(['activate'])
+    console.log('clicked')
+    this.router.navigate(['signup2'])
   }
 
 }

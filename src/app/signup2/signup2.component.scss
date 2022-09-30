@@ -1,15 +1,10 @@
 .mainarea{
-    display: flex;
+        display:flex;
     .color
         {
-            // position: absolute;
-            
-            width: 676px;
-            height: 100vh;
-            // left: 0px;
-            // top: 0px;
-            
-            background: #EB5757;
+            height:100vh;
+           width:50% ;
+           background-color: #EB5757
             
             
         }
@@ -19,26 +14,18 @@
             .content
                 {
                     
-
+                    margin-top:226px;
   
 
                     h6
                         {
-
+                            padding-left: 92px;
                         }
                     p
                         {
-                            display: flex;
-                            width:442px;
                             
-                            height:81px;
-                            
-                            margin-Top:338px;
-                            
-                            margin-Left:92px
-                              
-                            
-                            
+                            padding-left: 92px;  
+                            margin-top: 10px;
                         
                         }    
 
