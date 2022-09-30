@@ -9,6 +9,7 @@ import {ButtonModule} from 'primeng/button';
 import { Signup2Component } from './signup2/signup2.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import {InputTextModule} from 'primeng/inputtext'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    ButtonModule
+    ButtonModule,
+    InputTextModule
     
   ],
   providers: [],
