@@ -1,0 +1,91 @@
+.mainarea{
+    display:flex;
+    .left{
+        background-color: red;
+        width:50%;
+        height: 100vh;
+        img{
+            margin-left: 204px;
+            margin-top: 235px;
+            
+        }
+    }
+        .right{
+            
+        .content{
+                // margin-left:77px
+            h6{
+                margin-left: 77px;
+                margin-top: 147px;
+
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+            }
+            p{
+                margin-left: 77px;
+                margin-top: 14px;
+
+                font-family: 'Montserrat';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+            }
+            .form{
+                .form-label{
+                    width: 59px;
+                    height: 15px;
+
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                    margin-left: 77px;
+                margin-top: 32px;
+                }
+                .form-label2{
+                    
+                    height: 15px;
+                    width:113px;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 15px;
+                    margin-left: 77px;
+                margin-top: 16px;
+                }
+                .form-control{
+                    width: 320px;
+                    height: 38px;
+                    border-radius: 3px;
+                    margin-top: 6px;
+                    margin-left: 77px;
+                }
+            }
+           .button{
+                p-button{
+                width: 320px;
+                height: 32px;
+                border-radius: 4px;
+                margin-top: 31px;
+                margin-left: 77px;
+                
+                }
+            }
+            a{
+                margin-left:77px;
+                margin-top: 32px;
+                text-decoration: none;
+            }
+            
+
+        }
+    }
+
+
+}

@@ -21,17 +21,15 @@
                 
             </div>
         </div> -->
-        
-        <!-- <div class="p-field">
+
+<!-- <div class="p-field">
          <label for="username1">Username</label>
          <input id="username1" type="username" aria-describedby="username1-help" pInputText  />
      </div> -->
-     
-
-   <!-- </div> -->
-   <!-- </div> -->
 
 
+<!-- </div> -->
+<!-- </div> -->
 
 
 
@@ -42,30 +40,65 @@
 
 
 
-   <div class="mainarea">
-      <div class="col-6 logo">
-         <img src="../../assets/Screenshot 2022-09-24 at 4.24 1 (1).png" alt="" >
-      </div>
-      <div class="col-6 signup" >
-         <div class="signInform">        
-               <div class="headers">
-                  <h2>Hello, Welcome</h2>
-                 
-               </div>
-               <p>Enter to digital learning</p> 
-         
-            <div class="form">
-               <h6>orgname</h6>
-               <input  type="text" pInputText placeholder="name">
-               <h6>Email</h6>
-               <input  type="text" pInputText placeholder="email">
-               <h6>Password</h6>
-               <input  type="text" pInputText placeholder="password">
-               <h6>MobileNumber</h6>
-               <input type="text" pInputText placeholder="mobileNumber"><br>
-               <button (click)="createAccount()">create Account</button>
-               <p>Already Have an account? <a routerLink="">login</a></p>
-            </div> 
-      </div> 
+
+
+<div class="mainarea">
+   <div class="col-6 logo">
+      <img src="../../assets/Screenshot 2022-09-24 at 4.24 1 (1).png" alt="">
    </div>
- </div>
+   <div class="col-6 signup">
+      <div class="signInform">
+         <div class="headers">
+            <h2>Hello, Welcome</h2>
+
+         </div>
+         <p>Enter to digital learning</p>
+
+         <div class="form" [formGroup]="data">
+
+            <h6>orgname</h6>
+            <input type="text" pInputText placeholder="name" formControlName="name">
+            <ng-container *ngIf="form['name'].invalid && (form['name'].touched || form['name'].dirty)">
+               <p style="color: red;" *ngIf="form['name'].errors?.required">name is required</p>
+            </ng-container>
+            <h6>Email</h6>
+            <input type="text" pInputText placeholder="email" formControlName="email">
+            <ng-container *ngIf="form['email'].invalid && (form['email'].touched || form['email'].dirty)">
+
+               <p style="color:red" *ngIf="form['email'].errors?.required"> Email is required</p>
+               <p style="color:red" *ngIf="form['email'].errors?.email"> Enter a valid Email</p>
+
+            </ng-container>
+            <h6>Password</h6>
+            <input type="password" pInputText placeholder="password" formControlName="password">
+            <ng-container *ngIf="form['password'].invalid && (form['password'].touched || form.password.dirty)">
+               <p style="color:red" *ngIf="form['password'].errors?.required"> password is required</p>
+               <p style="color:red" *ngIf="form['password'].errors?.['minlength']"> at least 5 characters</p>
+
+
+            </ng-container>
+            <h6>MobileNumber</h6>
+            <input type="number" pInputText placeholder="mobileNumber" formControlName="mobilenumber">
+            <ng-container
+               *ngIf="form['mobilenumber'].invalid && (form['mobilenumber'].touched || form['mobilenumber'].dirty)">
+
+               <p style="color:red" *ngIf="form['mobilenumber'].errors?.required"> mobilenumber is required</p>
+               <p style="color:red" *ngIf="form['mobilenumber'].errors?.mobilenumber"> please,Enter 10 digit Mobile
+                  Number</p>
+
+            </ng-container>
+
+
+            <br>
+            <!-- <button (click)="createAccount()">create Account</button> -->
+
+            <p-toast></p-toast>
+
+            <p-confirmPopup></p-confirmPopup>
+            <button (click)="createAccount($event)" pButton icon="pi pi-check" label="Confirm"></button>
+            <p>Already Have an account? <a routerLink="/login">login</a></p>
+
+         </div>
+      </div>
+   </div>
+</div>
