@@ -40,17 +40,21 @@ export class SignupComponent implements OnInit {
   }
 createAccount(){
 console.log('clicked')
-    this.confirmationService.confirm({
-      message: 'Are you sure that you want to proceed?',
-      accept: () => { 
-        this.messageService.add({ key:'c', severity:'info', summary:'Confirmed', detail:'You have accepted'});
-      this.router.navigate(['signup2'])
-      } ,
-      reject: () => {
-        this.messageService.add({key:'c',severity:'error', summary:'Rejected', detail:'You have rejected'});
-      }
+  //   this.confirmationService.confirm({
+  //     message: 'Are you sure that you want to proceed?',
+  //     accept: () => { 
+  //       this.messageService.add({ key:'c', severity:'info', summary:'Confirmed', detail:'You have accepted'});
+  //     this.router.navigate(['signup2'])
+  //     } ,
+  //     reject: () => {
+  //       this.messageService.add({key:'c',severity:'error', summary:'Rejected', detail:'You have rejected'});
+  //     }
       
-  });
+  // });
+
+
+
+  
   }
 
 }
