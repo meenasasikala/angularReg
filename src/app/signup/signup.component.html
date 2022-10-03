@@ -90,15 +90,18 @@
 
 
             <br>
-            <!-- <button (click)="createAccount()">create Account</button> -->
+            
 
-            <p-toast></p-toast>
-
+            <p-toast position="top-center" key="c"></p-toast>
             <p-confirmPopup></p-confirmPopup>
-            <button (click)="createAccount($event)" pButton icon="pi pi-check" label="Confirm"></button>
+            <p-button (click)="createAccount()" icon="pi pi-check" label="">Create Account</p-button>
             <p>Already Have an account? <a routerLink="/login">login</a></p>
 
          </div>
+         
+            
+            
+      
       </div>
    </div>
 </div>

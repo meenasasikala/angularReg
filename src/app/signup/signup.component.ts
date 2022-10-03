@@ -2,8 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PatternValidator, FormControl, Validators,FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PopupService } from '@ng-bootstrap/ng-bootstrap/util/popup';
-import { ConfirmationService } from 'primeng/api';
+import { ConfirmationService, Message } from 'primeng/api';
 import { MessageService } from 'primeng/api';
+
 
 
 @Component({
@@ -12,11 +13,12 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  messageService: any;
-  confirmationService: any; 
-data:any;
-user:any;
-  constructor(private router:Router,private active:ActivatedRoute,private confirmation:ConfirmationService,private message:MessageService) { }
+  data:any;
+
+  constructor(private router:Router,
+              private active:ActivatedRoute,
+              private confirmationService:ConfirmationService,
+              private messageService:MessageService) { }
   @Input()
 
   ngOnInit(): void {
@@ -36,21 +38,19 @@ user:any;
   get form(){
    return this.data.controls
   }
-   
-
-  createAccount(event:any){
-    if(this.data.dirty){
+createAccount(){
+console.log('clicked')
     this.confirmationService.confirm({
       message: 'Are you sure that you want to proceed?',
       accept: () => { 
-        console.log('clicked')
+        this.messageService.add({ key:'c', severity:'info', summary:'Confirmed', detail:'You have accepted'});
       this.router.navigate(['signup2'])
-      } 
+      } ,
+      reject: () => {
+        this.messageService.add({key:'c',severity:'error', summary:'Rejected', detail:'You have rejected'});
+      }
       
   });
- 
-
-
   }
-  }
+
 }

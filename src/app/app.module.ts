@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule ,CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,10 @@ import { ResetComponent } from './reset/reset.component';
 import {ConfirmPopupModule} from 'primeng/confirmpopup';
 import { ToastModule } from "primeng/toast";
 import { ConfirmationService, MessageService } from 'primeng/api';
+import {ConfirmDialogModule}from 'primeng/confirmdialog';
+import {BrowserAnimationsModule} from'@angular/platform-browser/animations';
+import {MessagesModule} from 'primeng/messages'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,9 +43,13 @@ import { ConfirmationService, MessageService } from 'primeng/api';
     FormsModule,
     ConfirmPopupModule,
     BrowserModule,
-    ToastModule
+    ToastModule,
+    ConfirmDialogModule,BrowserAnimationsModule,
+    MessagesModule,
+
   ],
   providers: [ConfirmationService,MessageService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
