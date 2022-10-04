@@ -14,7 +14,7 @@ import { MessageService } from 'primeng/api';
 })
 export class SignupComponent implements OnInit {
   data:any;
-
+  isDisabled:boolean=false
   constructor(private router:Router,
               private active:ActivatedRoute,
               private confirmationService:ConfirmationService,
@@ -30,6 +30,7 @@ export class SignupComponent implements OnInit {
     password:new FormControl(null,[Validators.required,Validators.minLength(5),Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
     mobilenumber:new FormControl(null,[Validators.required,Validators.maxLength(10),Validators.pattern("^[0-9]*$")])
     })
+
   }
   
   
@@ -39,15 +40,16 @@ export class SignupComponent implements OnInit {
    return this.data.controls
   }
 createAccount(){
+  if( this.data.invalid){
+    return this.data.markAllAsTouched()
+   }
 console.log('clicked')
 // this.data.touched;
-
+this.isDisabled=true
     this.confirmationService.confirm({
       message: 'Are you sure that you want to proceed?',
       accept: () => { 
-       if( this.data.invalid){
-        return this.data.markAllAsTouched()
-       }
+ 
         this.messageService.add({ key:'c', severity:'info', summary:'Confirmed', detail:'You have accepted'});
       this.router.navigate(['signup2'])
       } ,
@@ -57,7 +59,7 @@ console.log('clicked')
       
   });
 
-// this.messageService.submit()
+
 
   
   }

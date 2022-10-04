@@ -10,9 +10,11 @@ value:any
   constructor() { }
 
   ngOnInit(): void {
+    
   }
   submit(){
-    return this.value
+    console.log(this.value);
+    
   }
 
 }

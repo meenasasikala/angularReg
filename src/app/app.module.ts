@@ -22,6 +22,7 @@ import {BrowserAnimationsModule} from'@angular/platform-browser/animations';
 import {MessagesModule} from 'primeng/messages'
 import {HttpClientModule} from '@angular/common/http';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AddproductComponent } from './addproduct/addproduct.component';
     Forgetpage2Component,
     ResetComponent,
     AddproductComponent,
+    TableComponent,
     
   ],
   imports: [
