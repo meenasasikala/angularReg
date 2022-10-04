@@ -20,6 +20,8 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import {ConfirmDialogModule}from 'primeng/confirmdialog';
 import {BrowserAnimationsModule} from'@angular/platform-browser/animations';
 import {MessagesModule} from 'primeng/messages'
+import {HttpClientModule} from '@angular/common/http';
+import { AddproductComponent } from './addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import {MessagesModule} from 'primeng/messages'
     ForgetpageComponent,
     Forgetpage2Component,
     ResetComponent,
+    AddproductComponent,
     
   ],
   imports: [
@@ -46,6 +49,7 @@ import {MessagesModule} from 'primeng/messages'
     ToastModule,
     ConfirmDialogModule,BrowserAnimationsModule,
     MessagesModule,
+    HttpClientModule
 
   ],
   providers: [ConfirmationService,MessageService],

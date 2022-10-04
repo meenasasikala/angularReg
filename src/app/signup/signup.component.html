@@ -58,17 +58,17 @@
 
             <h6>orgname</h6>
             <input type="text" pInputText placeholder="name" formControlName="name">
-            <ng-container *ngIf="form['name'].invalid && (form['name'].touched || form['name'].dirty)">
-               <p style="color: red;" *ngIf="form['name'].errors?.required">name is required</p>
-            </ng-container>
+            <div  class="errin" *ngIf="form['name'].invalid && (form['name'].touched || form['name'].dirty)">
+               <div class="errmsg" style="color: red;" *ngIf="form['name'].errors?.required">name is required</div>
+            </div>
             <h6>Email</h6>
             <input type="text" pInputText placeholder="email" formControlName="email">
-            <ng-container *ngIf="form['email'].invalid && (form['email'].touched || form['email'].dirty)">
+            <div class="errin" *ngIf="form['email'].invalid && (form['email'].touched || form['email'].dirty)">
 
-               <p style="color:red" *ngIf="form['email'].errors?.required"> Email is required</p>
-               <p style="color:red" *ngIf="form['email'].errors?.email"> Enter a valid Email</p>
+               <div class="errmsg" style="color:red" *ngIf="form['email'].errors?.required"> Email is required</div>
+               <div class="errmsg" style="color:red" *ngIf="form['email'].errors?.email"> Enter a valid Email</div>
 
-            </ng-container>
+               </div>
             <h6>Password</h6>
             <input type="password" pInputText placeholder="password" formControlName="password">
             <ng-container *ngIf="form['password'].invalid && (form['password'].touched || form.password.dirty)">
@@ -78,13 +78,16 @@
 
             </ng-container>
             <h6>MobileNumber</h6>
-            <input type="number" pInputText placeholder="mobileNumber" formControlName="mobilenumber">
+            <input   pInputText placeholder="mobileNumber" formControlName="mobilenumber">
             <ng-container
                *ngIf="form['mobilenumber'].invalid && (form['mobilenumber'].touched || form['mobilenumber'].dirty)">
 
                <p style="color:red" *ngIf="form['mobilenumber'].errors?.required"> mobilenumber is required</p>
-               <p style="color:red" *ngIf="form['mobilenumber'].errors?.mobilenumber"> please,Enter 10 digit Mobile
-                  Number</p>
+               <!-- <p style="color:red" *ngIf="form['mobilenumber'].errors?.number"> please,Enter 10 digit Mobile
+                  Number</p> -->
+                  <p style="color:red" *ngIf="form['mobilenumber'].errors?.pattern"> Enter only number</p>
+                  <p style="color:red" *ngIf="form['mobilenumber'].errors?.maxlength"> mobile number should have maximum length of 10</p>
+
 
             </ng-container>
 

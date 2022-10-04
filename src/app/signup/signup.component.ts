@@ -28,7 +28,7 @@ export class SignupComponent implements OnInit {
     name: new FormControl(null,[Validators.required]),
     email: new FormControl(null,[Validators.required,Validators.email]),
     password:new FormControl(null,[Validators.required,Validators.minLength(5),Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
-    mobilenumber:new FormControl(null,[Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")])
+    mobilenumber:new FormControl(null,[Validators.required,Validators.maxLength(10),Validators.pattern("^[0-9]*$")])
     })
   }
   
@@ -40,19 +40,24 @@ export class SignupComponent implements OnInit {
   }
 createAccount(){
 console.log('clicked')
-  //   this.confirmationService.confirm({
-  //     message: 'Are you sure that you want to proceed?',
-  //     accept: () => { 
-  //       this.messageService.add({ key:'c', severity:'info', summary:'Confirmed', detail:'You have accepted'});
-  //     this.router.navigate(['signup2'])
-  //     } ,
-  //     reject: () => {
-  //       this.messageService.add({key:'c',severity:'error', summary:'Rejected', detail:'You have rejected'});
-  //     }
+// this.data.touched;
+
+    this.confirmationService.confirm({
+      message: 'Are you sure that you want to proceed?',
+      accept: () => { 
+       if( this.data.invalid){
+        return this.data.markAllAsTouched()
+       }
+        this.messageService.add({ key:'c', severity:'info', summary:'Confirmed', detail:'You have accepted'});
+      this.router.navigate(['signup2'])
+      } ,
+      reject: () => {
+        this.messageService.add({key:'c',severity:'error', summary:'Rejected', detail:'You have rejected'});
+      }
       
-  // });
+  });
 
-
+// this.messageService.submit()
 
   
   }

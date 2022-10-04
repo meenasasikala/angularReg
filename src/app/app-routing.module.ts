@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { ForgetpageComponent } from './forgetpage/forgetpage.component';
 import { Forgetpage2Component } from './forgetpage2/forgetpage2.component';
 import { ResetComponent } from './reset/reset.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path:"reset",
     component:ResetComponent
+  },
+  {
+  path:"product",
+  component:AddproductComponent
   }
 
 ];
