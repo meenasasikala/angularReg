@@ -71,7 +71,7 @@
             </div>
             <h6>Password</h6>
             <input type="password" pInputText placeholder="password" formControlName="password">
-            <div class="errin" *ngIf="form['password'].invalid && (form['password'].touched || form.password.dirty)">
+            <div class="errin" *ngIf="form['password'].invalid && (form['password'].touched || form['password'].dirty)">
                <div class="errmsg" style="color:red" *ngIf="form['password'].errors?.required"> password is required
                </div>
                <div class="errmsg" style="color:red" *ngIf="form['password'].errors?.['minlength']"> at least 5
@@ -102,7 +102,7 @@
 
             <p-toast position="top-center" key="c"></p-toast>
             <p-confirmPopup></p-confirmPopup>
-            <p-button (click)="createAccount()" icon="pi pi-check" [disabled]=isDisabled label="">Create Account
+            <p-button (onClick)="createAccount($event)" icon="pi pi-check" [disabled]="data.invalid" label="">Create Account
             </p-button>
             <p>Already Have an account? <a routerLink="/login">login</a></p>
 

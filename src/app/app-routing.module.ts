@@ -8,6 +8,7 @@ import { ForgetpageComponent } from './forgetpage/forgetpage.component';
 import { Forgetpage2Component } from './forgetpage2/forgetpage2.component';
 import { ResetComponent } from './reset/reset.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
+import { TableComponent } from './table/table.component';
 
 const routes: Routes = [
   {
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
   path:"product",
   component:AddproductComponent
+  },
+ {
+    path:"table",
+    component:TableComponent
   }
 
 ];
