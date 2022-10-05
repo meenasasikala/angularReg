@@ -23,6 +23,7 @@ import {MessagesModule} from 'primeng/messages'
 import {HttpClientModule} from '@angular/common/http';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { TableComponent } from './table/table.component';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TableComponent } from './table/table.component';
     Forgetpage2Component,
     ResetComponent,
     AddproductComponent,
-    TableComponent,
+    TableComponent
+    
     
   ],
   imports: [
@@ -51,7 +53,8 @@ import { TableComponent } from './table/table.component';
     ToastModule,
     ConfirmDialogModule,BrowserAnimationsModule,
     MessagesModule,
-    HttpClientModule
+    HttpClientModule,
+    TableModule
 
   ],
   providers: [ConfirmationService,MessageService],

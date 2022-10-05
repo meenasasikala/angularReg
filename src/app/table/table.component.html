@@ -1,16 +1,16 @@
 <!-- <p>table works!</p> -->
-<p-table [value]="employee" responsiveLayout="scroll">
+<p-table [value]="employee" [paginator]="true" [rows]="3" [showCurrentPageReport]="true" responsiveLayout="scroll"  [globalFilterFields]="['Id','NAME','AGE','SALARY']">
     <ng-template pTemplate="header">
         <tr>
-            <th>ID</th>
-            <th>NAME</th>
-            <th>AGE</th>
-            <th>SALARY</th>
-            
+            <th pSortableColumn="id">ID<p-sortIcon field="id"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
+            <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
+            <th pSortableColumn="age">AGE <p-sortIcon field="age"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
+            <th pSortableColumn="salary">SALARY<p-sortIcon field="salary"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
         </tr>
+       
     </ng-template>
     <ng-template pTemplate="body" let-employee>
-        <tr *ngFor="let data of datalist,index as i">
+        <tr>
             <td>{{employee.id}}</td>
             <td>{{employee.name}}</td>
             <td>{{employee.age}}</td>
