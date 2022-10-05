@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-addproduct',
@@ -6,15 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addproduct.component.scss']
 })
 export class AddproductComponent implements OnInit {
-value:any
-  constructor() { }
+  workers:any
+  constructor(private appservice:ServiceService) { }
 
   ngOnInit(): void {
-    
+    // this.getuser()
+    this.getData()
   }
-  submit(){
-    console.log(this.value);
-    
-  }
+//   getuser(){
+//     this.appservice.getUser().subscribe((result: any)=>{
+//       this.data=result
+//       console.log(this.data);
+      
+//   })
 
-}
+// }
+getData(){
+  console.log('inside getdatta function')
+  this.appservice.getdata().subscribe((data:any)=>{
+    this.workers=data
+    console.log('getdata',data)
+  })
+}}

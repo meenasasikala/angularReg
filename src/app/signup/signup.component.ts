@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PopupService } from '@ng-bootstrap/ng-bootstrap/util/popup';
 import { ConfirmationService, Message } from 'primeng/api';
 import { MessageService } from 'primeng/api';
+import { ServiceService } from '../service.service';
 
 
 
@@ -13,15 +14,15 @@ import { MessageService } from 'primeng/api';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-
-  data: FormGroup;
+data:any=[]
+  // data: FormGroup;
   // isDisabled: boolean = false;
 
   constructor(private router: Router,
     private active: ActivatedRoute,
     private confirmationService: ConfirmationService,
     private messageService: MessageService,
-    private fb: FormBuilder) {
+    private fb: FormBuilder,private appservice:ServiceService ) {
     this.data = this.fb.group({
       name: [null, [Validators.required]],
       email: [null, [Validators.required, Validators.email]],
@@ -57,6 +58,10 @@ export class SignupComponent implements OnInit {
 
 
   createAccount(e:any) {
+
+    // 
+    
+
     console.log(e.stopPropagation() )
     // this.isDisabled = true
     console.log('clicked');
@@ -78,10 +83,6 @@ export class SignupComponent implements OnInit {
         this.messageService.add({ key: 'c', severity: 'error', summary: 'Rejected', detail: 'You have rejected' });
       }
     });
-
-
-
-
 
   }
 

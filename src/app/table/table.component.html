@@ -1,20 +1,23 @@
 <!-- <p>table works!</p> -->
 <p-table [value]="employee" [paginator]="true" [rows]="3" [showCurrentPageReport]="true" responsiveLayout="scroll"  [globalFilterFields]="['Id','NAME','AGE','SALARY']">
     <ng-template pTemplate="header">
+        
         <tr>
+            
             <th pSortableColumn="id">ID<p-sortIcon field="id"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
             <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
-            <th pSortableColumn="age">AGE <p-sortIcon field="age"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
-            <th pSortableColumn="salary">SALARY<p-sortIcon field="salary"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
+            <th pSortableColumn="age">message <p-sortIcon field="age"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
+            <th pSortableColumn="salary">Email<p-sortIcon field="salary"></p-sortIcon><p-columnFilter type="text" field="Id" display="menu"></p-columnFilter></th>
         </tr>
        
     </ng-template>
-    <ng-template pTemplate="body" let-employee>
+    <ng-template pTemplate="body" let-list >
         <tr>
-            <td>{{employee.id}}</td>
-            <td>{{employee.name}}</td>
-            <td>{{employee.age}}</td>
-            <td>{{employee.salary}}</td>
+            
+            <td>{{list.id}}</td>
+            <td>{{list.name}}</td>
+            <td>{{list.message}}</td>
+            <td>{{list.email}}</td>
             
         </tr>
     </ng-template>

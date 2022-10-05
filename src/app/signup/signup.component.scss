@@ -156,3 +156,12 @@
         margin-left: 144px;
     }
 }
+h6::after{
+    margin-left: 10px;
+
+    content: '*';
+    size: 10px;
+
+    color:red;
+
+}

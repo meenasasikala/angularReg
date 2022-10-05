@@ -1,6 +1,6 @@
 <!-- <p>addproduct works!</p> -->
 
-<div class="market">
+<!-- <div class="market">
     <div class="div">
         <div class="label">
    <label for="name">productname</label></div>
@@ -11,7 +11,26 @@
 </div>
    <div class="btn">
     <p-button  (click)= "submit()" label="Submit"></p-button>
-</div>
+</div> -->
 
+<!-- <h1>testing</h1>
 
+<p>{{data | json}}</p> -->
 
+<p-table [value]="workers">
+<ng-template pTemplate="header">
+    <tr>
+      <th>NAME</th>
+      <th>AGE</th>
+      <th>SALARY</th>
+      
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-workers>
+    <tr>
+      <td>{{workers.name}}</td>
+      <td>{{workers.age}}</td>
+      <td>{{workers.salary}}</td>
+    </tr>
+  </ng-template>
+</p-table>

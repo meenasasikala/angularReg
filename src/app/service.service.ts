@@ -1,11 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
 
-  constructor(private httpclient:HttpClientModule) { }
+  constructor(private httpclient : HttpClient) { }
   
+  getUser(){
+    return this.httpclient.get("http://localhost:3006/usermessage")
+  }
+  getdata(){
+    return this.httpclient.get("http://localhost:3006/employee")
+  }
 }
