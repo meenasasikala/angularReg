@@ -2,6 +2,7 @@ import { mergeNsAndName } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import {TableModule} from 'primeng/table';
 import { ServiceService } from '../service.service';
+import { Router } from '@angular/router';
 
 
 
@@ -11,17 +12,27 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-employee:any
-  constructor(private appservice:ServiceService) { }
+  values:any
+  name:any
+  age:any
+  salary:any
+  constructor(private appservice:ServiceService,private product: Router) { }
 
   ngOnInit(): void {
-   this.getuser()
+   
         
   }
-  getuser(){
-    this.appservice.getUser().subscribe((result)=>{
-      this.employee=result
-      console.log(this.employee);
-  })
-}
+  // insert(){
+  //   console.log('inside insert function')
+  //   this.values={
+  //     name:this.name,
+  //     age:this.age,
+  //     salary:this.salary
+  //   }
+  //   this.appservice.insert(this.values).subscribe(data=>{
+  //     console.log(this.values);
+  //     this.product.navigate(['product'])
+      
+  //   })
+  // }
 }

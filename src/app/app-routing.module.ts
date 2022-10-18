@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { Signup2Component } from './signup2/signup2.component';
@@ -9,10 +9,11 @@ import { Forgetpage2Component } from './forgetpage2/forgetpage2.component';
 import { ResetComponent } from './reset/reset.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { TableComponent } from './table/table.component';
+import { UploadingComponent } from './uploading/uploading.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: "signup",
     redirectTo: "signup",
     pathMatch: "full"
   },
@@ -29,7 +30,7 @@ const routes: Routes = [
     component:RegisterComponent
   },
   {
-    path:"login",
+    path:"",
     component:LoginComponent
   },
   {
@@ -51,8 +52,11 @@ const routes: Routes = [
  {
     path:"table",
     component:TableComponent
+  },
+  {
+  path:"upload",
+  component:UploadingComponent
   }
-
 ];
 
 @NgModule({

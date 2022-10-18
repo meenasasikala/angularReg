@@ -14,4 +14,15 @@ export class ServiceService {
   getdata(){
     return this.httpclient.get("http://localhost:3006/employee")
   }
+  insert(value:any){
+    console.log(value);
+    return this.httpclient.post("http://localhost:3006/insert",value)
+  }
+  getbyid(id:any){
+    return this.httpclient.get('http://localhost:3006/crud?id='+id)
+  }
+
+  getfile(){
+    
+  }
 }

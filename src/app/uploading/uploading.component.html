@@ -1,0 +1,12 @@
+<!-- <p>uploading works!</p> -->
+<!-- <div class="container">
+<input #fileInput type="file" class="file-input" [accept]="acceptedFileExtensions" (change)="attachFile($event)" />
+  <div class="button">
+      <button class="fileButton" action="file" (click)="uploading()" type="submit">Upload document</button>
+      allowed file types(JPG, PNG, GIF)
+</div> 
+ </div>  
+   -->
+<div class="container">
+    <p-fileUpload name="myfile[]" [customUpload]="true" (uploadHandler)="myUploader($event)"></p-fileUpload>
+</div>

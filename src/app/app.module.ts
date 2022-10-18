@@ -24,6 +24,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { TableComponent } from './table/table.component';
 import {TableModule} from 'primeng/table';
+import { PngtableComponent } from './pngtable/pngtable.component';
+import { UploadingComponent } from './uploading/uploading.component';
+import {FileUploadModule} from 'primeng/fileupload';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import {TableModule} from 'primeng/table';
     Forgetpage2Component,
     ResetComponent,
     AddproductComponent,
-    TableComponent
+    TableComponent,
+    PngtableComponent,
+    UploadingComponent
     
     
   ],
@@ -54,7 +59,8 @@ import {TableModule} from 'primeng/table';
     ConfirmDialogModule,BrowserAnimationsModule,
     MessagesModule,
     HttpClientModule,
-    TableModule
+    TableModule,
+    FileUploadModule
 
   ],
   providers: [ConfirmationService,MessageService],
